@@ -1,5 +1,5 @@
 import { NgcxTreeSampleData } from './_model';
-import { someFruitNodes } from './model/nodes';
+import { someFruitNodes } from './data/nodes';
 
 export const disableDnd: NgcxTreeSampleData = {
   title: 'Disable Drag & Drop',

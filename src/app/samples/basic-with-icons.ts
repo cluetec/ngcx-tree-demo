@@ -1,5 +1,5 @@
 import { NgcxTreeSampleData } from './_model';
-import { someFruitNodesWithIcons } from './model/nodes-with-icons';
+import { someFruitNodesWithIcons } from './data/nodes-with-icons';
 
 export const basicWithIcons: NgcxTreeSampleData = {
   title: 'Icons',

@@ -1,6 +1,6 @@
 import { NgcxTreeNodeWrapper } from '@cluetec/ngcx-tree';
 import { NgcxTreeSampleData } from './_model';
-import { someMoreNodes } from './model/more-nodes';
+import { someMoreNodes } from './data/more-nodes';
 
 export const disableDndOnLevels: NgcxTreeSampleData = {
   title: 'Disable Drag & Drop sometimes',

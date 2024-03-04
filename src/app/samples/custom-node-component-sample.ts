@@ -1,6 +1,6 @@
 import { NgcxTreeSampleData } from './_model';
 import { CustomNodeComponent } from './custom-node-component';
-import { someFruitNodes } from './model/nodes';
+import { someFruitNodes } from './data/nodes';
 
 export const customNodeComponent: NgcxTreeSampleData = {
   title: 'Custom component',
