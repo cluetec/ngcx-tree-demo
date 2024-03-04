@@ -5,7 +5,7 @@ import { someFruitNodes } from './model/nodes';
 export const customNodeComponent: NgcxTreeSampleData = {
   title: 'Custom component',
   description: `Use your own component to render each node. <br> 
-  See angular component <a href="https://github.com/cluetec/ngcx-tree-demo/blob/main/src/app/samples/custom-node-component.ts">here</a>`,
+  See <a href="https://github.com/cluetec/ngcx-tree-demo/blob/main/src/app/samples/custom-node-component.ts">CustomNodeComponent</a>`,
   nodes: someFruitNodes,
   config: {
     treeNodeContentComponent: CustomNodeComponent,

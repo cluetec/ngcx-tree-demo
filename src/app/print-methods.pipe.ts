@@ -11,11 +11,7 @@ export class PrintMethodsPipe implements PipeTransform {
   printMethods(value: any) {
     let result = value;
     if (typeof value == 'function') {
-      if (value.name) {
-        result = value.name;
-      } else {
-        result = value.toString();
-      }
+      result = value.toString();
     } else if (
       value &&
       typeof value == 'object' &&
@@ -38,15 +34,19 @@ export class PrintMethodsPipe implements PipeTransform {
     let result = '';
     if (typeof value == 'object') {
       result += ' '.repeat(layer * 2) + '{\n';
-      Object.keys(value).forEach(
-        (key) =>
-          (result +=
+      Object.keys(value).forEach((key) => {
+        if (key === 'treeNodeContentComponent') {
+          result +=
+            ' '.repeat((layer + 1) * 2) + key + ': CustomNodeComponent,\n';
+        } else {
+          result +=
             ' '.repeat((layer + 1) * 2) +
             key +
             ': ' +
             this.printJson(value[key], layer + 1) +
-            ',\n')
-      );
+            ',\n';
+        }
+      });
       result += ' '.repeat(layer * 2) + '}';
     } else {
       result += value;
