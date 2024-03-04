@@ -4,31 +4,39 @@
   border-radius: 10px;
   border: 1px solid #00385c;
 
-  .button-bar {
+  .button-bars {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 40px;
-    gap: 15px;
+    justify-content: space-between;
     border-bottom: 1px solid #00385c;
-    padding-right: 10px;
+    padding: 0 10px;
 
-    .button {
-      cursor: pointer;
-      padding: 5px;
+    .button-bar {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      gap: 15px;
 
-      &:hover {
-        color: #01578d;
-      }
-      &.active {
-        background-color: #00385c;
-        color: white;
-        font-style: bold;
-        border-radius: 5px;
-      }
+      .button {
+        cursor: pointer;
+        padding: 5px;
 
-      i {
-        margin-right: 5px;
+        &.left {
+          justify-self: left;
+        }
+
+        &:hover {
+          color: #01578d;
+        }
+        &.active {
+          background-color: #00385c;
+          color: white;
+          font-style: bold;
+          border-radius: 5px;
+        }
+
+        i {
+          margin-right: 5px;
+        }
       }
     }
   }

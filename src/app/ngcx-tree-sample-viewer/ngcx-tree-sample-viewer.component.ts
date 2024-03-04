@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import {
+  NgcxTreeComponent,
   NgcxTreeNodeMovedEvent,
   NgcxTreeNodeWrapper,
 } from '@cluetec/ngcx-tree';
@@ -16,6 +17,9 @@ export class NgcxTreeSampleViewerComponent implements OnInit {
 
   htmlCode?: string;
   shownContent: string = 'SAMPLE';
+
+  @ViewChild('ngcxTree', { static: false })
+  ngcxTree?: NgcxTreeComponent<any>;
 
   ngOnInit() {
     this.htmlCode = this.sample.config

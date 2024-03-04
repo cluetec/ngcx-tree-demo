@@ -2,36 +2,46 @@
 <p [innerHTML]="sample.description"></p>
 
 <div class="sample-container">
-  <div class="button-bar">
-    <div
-      class="button"
-      [class.active]="shownContent === 'SAMPLE'"
-      (click)="shownContent = 'SAMPLE'"
-    >
-      <i class="fa fa-eye"></i>sample
+  <div class="button-bars">
+    <div class="button-bar left">
+      <div class="button" (click)="ngcxTree?.treeControl?.expandAll()">
+        <i class="fa fa-square-plus"></i>Expand
+      </div>
+      <div class="button" (click)="ngcxTree?.treeControl?.collapseAll()">
+        <i class="fa fa-square-minus"></i>Collapse
+      </div>
     </div>
-    @if(sample.config) {
-    <div
-      class="button"
-      [class.active]="shownContent === 'CONFIG'"
-      (click)="shownContent = 'CONFIG'"
-    >
-      <i class="fa fa-gear"></i>config
-    </div>
-    }
-    <div
-      class="button"
-      [class.active]="shownContent === 'HTML'"
-      (click)="shownContent = 'HTML'"
-    >
-      <i class="fa fa-code"></i>html
-    </div>
-    <div
-      class="button"
-      [class.active]="shownContent === 'NODES'"
-      (click)="shownContent = 'NODES'"
-    >
-      <i class="fa fa-database"></i>nodes
+    <div class="button-bar">
+      <div
+        class="button"
+        [class.active]="shownContent === 'SAMPLE'"
+        (click)="shownContent = 'SAMPLE'"
+      >
+        <i class="fa fa-eye"></i>sample
+      </div>
+      @if(sample.config) {
+      <div
+        class="button"
+        [class.active]="shownContent === 'CONFIG'"
+        (click)="shownContent = 'CONFIG'"
+      >
+        <i class="fa fa-gear"></i>config
+      </div>
+      }
+      <div
+        class="button"
+        [class.active]="shownContent === 'HTML'"
+        (click)="shownContent = 'HTML'"
+      >
+        <i class="fa fa-code"></i>html
+      </div>
+      <div
+        class="button"
+        [class.active]="shownContent === 'NODES'"
+        (click)="shownContent = 'NODES'"
+      >
+        <i class="fa fa-database"></i>nodes
+      </div>
     </div>
   </div>
   @switch (shownContent) { @case ('CONFIG') {
@@ -43,6 +53,7 @@
   } @default {
   <div class="content ngcx-tree">
     <ngcx-tree
+      #ngcxTree
       [nodes]="sample.nodes"
       [config]="sample.config"
       (clickEvent)="clickEvent($event)"
