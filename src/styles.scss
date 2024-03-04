@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "webfonts";
+
+@import "node_modules/@cluetec/ngcx-tree/styles/styles";
+
+body {
+  font-family: "Open Sans";
+  font-size: 15px;
+  margin: 20px 10px 50px 10px;
+  padding: 0;
+  background-color: white;
+  font-weight: 400;
+  color: #3c3c3c;
+}

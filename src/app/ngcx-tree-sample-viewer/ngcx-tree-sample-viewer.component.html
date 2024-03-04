@@ -1,0 +1,55 @@
+<h3>{{ sample.title }}</h3>
+<p [innerHTML]="sample.description"></p>
+
+<div class="sample-container">
+  <div class="button-bar">
+    <div
+      class="button"
+      [class.active]="shownContent === 'SAMPLE'"
+      (click)="shownContent = 'SAMPLE'"
+    >
+      <i class="fa fa-eye"></i>sample
+    </div>
+    @if(sample.config) {
+    <div
+      class="button"
+      [class.active]="shownContent === 'CONFIG'"
+      (click)="shownContent = 'CONFIG'"
+    >
+      <i class="fa fa-gear"></i>config
+    </div>
+    }
+    <div
+      class="button"
+      [class.active]="shownContent === 'HTML'"
+      (click)="shownContent = 'HTML'"
+    >
+      <i class="fa fa-code"></i>html
+    </div>
+    <div
+      class="button"
+      [class.active]="shownContent === 'NODES'"
+      (click)="shownContent = 'NODES'"
+    >
+      <i class="fa fa-database"></i>nodes
+    </div>
+  </div>
+  @switch (shownContent) { @case ('CONFIG') {
+  <pre class="content config">{{ sample.config | printMethods }}</pre>
+  } @case ('HTML') {
+  <pre class="content html">{{ htmlCode }}</pre>
+  } @case ('NODES') {
+  <pre class="content data">{{ sample.nodes | json }}</pre>
+  } @default {
+  <div class="content ngcx-tree">
+    <ngcx-tree
+      [nodes]="sample.nodes"
+      [config]="sample.config"
+      (clickEvent)="clickEvent($event)"
+      (selectEvent)="selectEvent($event)"
+      (customEvent)="customEvent($event)"
+      (nodeMoved)="nodeMoved($event)"
+    ></ngcx-tree>
+  </div>
+  } }
+</div>
