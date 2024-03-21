@@ -17,7 +17,7 @@
     "@angular/forms": "^17.2.2",
     "@angular/platform-browser": "^17.2.2",
     "@angular/platform-browser-dynamic": "^17.2.2",
-    "@cluetec/ngcx-tree": "^17.0.1",
+    "@cluetec/ngcx-tree": "^17.0.2",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "rxjs": "~7.8.0",
     "zone.js": "~0.14.4"
@@ -35,5 +35,14 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "tslib": "^2.6.2",
     "typescript": "~5.2.2"
-  }
+  },
+  "keywords": [
+    "angular",
+    "component",
+    "tree",
+    "dnd",
+    "d&d",
+    "drag&drop",
+    "drag and drop"
+  ]
 }

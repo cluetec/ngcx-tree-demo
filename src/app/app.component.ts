@@ -3,11 +3,11 @@ import { NgcxTreeNode, NgcxTreeNodeWrapper } from '@cluetec/ngcx-tree';
 import { NgcxTreeSampleData } from './samples/_model';
 import { basicSample } from './samples/basic';
 import { basicWithIcons } from './samples/basic-with-icons';
+import { basicWithSelection } from './samples/basic-with-selection';
 import { customNodeComponent } from './samples/custom-node-component-sample';
 import { customNodeTemplate } from './samples/custom-node-template';
 import { disableDnd } from './samples/disable-dnd';
 import { disableDndOnLevels } from './samples/disable-dnd-by-level';
-import { basicWithSelection } from './samples/long-texts';
 
 @Component({
   selector: 'app-root',
