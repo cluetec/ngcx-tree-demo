@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgcxTreeNode, NgcxTreeNodeWrapper } from '@cluetec/ngcx-tree';
+import { NgcxTreeSampleViewerComponent } from './ngcx-tree-sample-viewer/ngcx-tree-sample-viewer.component';
 import { NgcxTreeSampleData } from './samples/_model';
 import { basicSample } from './samples/basic';
 import { basicWithIcons } from './samples/basic-with-icons';
@@ -13,6 +14,7 @@ import { disableDndOnLevels } from './samples/disable-dnd-by-level';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  imports: [NgcxTreeSampleViewerComponent],
 })
 export class AppComponent implements OnInit {
   samples: NgcxTreeSampleData[] = [
