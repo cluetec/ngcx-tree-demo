@@ -1,18 +1,20 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgcxTreeNode, NgcxTreeNodeWrapper } from '@cluetec/ngcx-tree';
+import { NgcxTreeSampleViewerComponent } from './ngcx-tree-sample-viewer/ngcx-tree-sample-viewer.component';
 import { NgcxTreeSampleData } from './samples/_model';
 import { basicSample } from './samples/basic';
 import { basicWithIcons } from './samples/basic-with-icons';
+import { basicWithSelection } from './samples/basic-with-selection';
 import { customNodeComponent } from './samples/custom-node-component-sample';
 import { customNodeTemplate } from './samples/custom-node-template';
 import { disableDnd } from './samples/disable-dnd';
 import { disableDndOnLevels } from './samples/disable-dnd-by-level';
-import { basicWithSelection } from './samples/long-texts';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  imports: [NgcxTreeSampleViewerComponent],
 })
 export class AppComponent implements OnInit {
   samples: NgcxTreeSampleData[] = [
