@@ -223,10 +223,8 @@
 @font-face {
   font-family: "FontAwesome";
   src: url("@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf")
-      format("truetype"); /* Safari, Android, iOS */
+    format("woff2");
+  /* Super Modern Browsers */
 }
 
 /* open-sans-condensed-700 - latin */

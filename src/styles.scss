@@ -1,13 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@use "sass:meta";
 
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
-@use "@fortawesome/fontawesome-free/scss/fontawesome";
-@use "@fortawesome/fontawesome-free/scss/regular";
-@use "@fortawesome/fontawesome-free/scss/solid";
-@use "@fortawesome/fontawesome-free/scss/brands";
-@use "webfonts";
+@include meta.load-css("@fortawesome/fontawesome-free/scss/fontawesome");
+@include meta.load-css("@fortawesome/fontawesome-free/scss/regular");
+@include meta.load-css("@fortawesome/fontawesome-free/scss/solid");
+@include meta.load-css("@fortawesome/fontawesome-free/scss/brands");
+@include meta.load-css("@fortawesome/fontawesome-free/scss/v4-shims");
+@include meta.load-css("webfonts");
 
-@use "@cluetec/ngcx-tree/styles/styles";
+@include meta.load-css("@cluetec/ngcx-tree/styles/styles");
 
 body {
   font-family: "Open Sans";
