@@ -1,6 +1,6 @@
 {
   "name": "ngcx-tree-demo",
-  "version": "0.0.0",
+  "version": "20.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,21 +10,24 @@
   },
   "private": false,
   "dependencies": {
-    "@angular/cdk": "^20.2.11",
-    "@angular/common": "^20.3.14",
-    "@angular/compiler": "^20.3.9",
-    "@angular/core": "^20.3.9",
-    "@angular/platform-browser": "^20.3.9",
-    "@angular/platform-browser-dynamic": "^20.3.9",
-    "@cluetec/ngcx-tree": "^20.0.0",
+    "@angular/cdk": "^20.2.14",
+    "@angular/common": "^20.3.16",
+    "@angular/compiler": "^20.3.16",
+    "@angular/core": "^20.3.16",
+    "@angular/platform-browser": "^20.3.16",
+    "@angular/platform-browser-dynamic": "^20.3.16",
+    "@cluetec/ngcx-tree": "^20.1.0",
     "@fortawesome/fontawesome-free": "^7.1.0",
+    "cache": "^3.0.0",
+    "clean": "^4.0.2",
+    "npm": "^11.9.0",
     "rxjs": "~7.8.2",
-    "zone.js": "~0.16.0"
+    "zone.js": "~0.15.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^20.3.8",
-    "@angular-eslint/template-parser": "^20.5.0",
-    "@angular/cli": "^20.3.8",
+    "@angular-devkit/build-angular": "^20.3.15",
+    "@angular-eslint/template-parser": "^20.5.1",
+    "@angular/cli": "^21.1.3",
     "tslib": "^2.6.2",
     "typescript": "~5.9.3"
   },
