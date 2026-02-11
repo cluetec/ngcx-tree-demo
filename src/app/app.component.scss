@@ -4,3 +4,8 @@
   border-radius: 5px;
   font-weight: bold;
 }
+.header-with-versions {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}

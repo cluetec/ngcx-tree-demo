@@ -9,6 +9,7 @@ import { customNodeComponent } from './samples/custom-node-component-sample';
 import { customNodeTemplate } from './samples/custom-node-template';
 import { disableDnd } from './samples/disable-dnd';
 import { disableDndOnLevels } from './samples/disable-dnd-by-level';
+import { Versions } from './version';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
     basicWithSelection,
     customNodeComponent,
   ];
+  Versions = Versions;
 
   @ViewChild('treeNodeTemplate', { static: true })
   treeNodeTemplate?: TemplateRef<any>;

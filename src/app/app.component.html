@@ -1,4 +1,14 @@
-<h1>Ngcx Tree Samples</h1>
+<div class="header-with-versions">
+  <h1>Ngcx Tree Demo</h1>
+  <p>
+    <i>
+      <b>Shown versions:</b>
+      <div>ngcx-tree-demo: {{ Versions.appVersion }}</div>
+      <div>ngcx-tree: {{ Versions.ngcxTreeVersion }}</div>
+    </i>
+  </p>
+</div>
+
 <p>
   Ngcx tree allows to render a tree and allows drag n drop. Bundle size is
   minimal because it uses only the &#64;angular/cdk dependency.
@@ -41,20 +51,20 @@
 </ul>
 <h2>Samples overview</h2>
 <ul>
-  @for (sample of samples;track sample.title) {
-  <li>
-    <a [href]="'#' + sample.title">{{ sample.title }}</a>
-  </li>
+  @for (sample of samples; track sample.title) {
+    <li>
+      <a [href]="'#' + sample.title">{{ sample.title }}</a>
+    </li>
   }
 </ul>
 
-@for (sample of samples;track sample.title) {
-<app-ngcx-tree-sample-viewer
-  [id]="sample.title"
-  [sample]="sample"
-></app-ngcx-tree-sample-viewer>
-<br />
-<br />
+@for (sample of samples; track sample.title) {
+  <app-ngcx-tree-sample-viewer
+    [id]="sample.title"
+    [sample]="sample"
+  ></app-ngcx-tree-sample-viewer>
+  <br />
+  <br />
 }
 <ng-template #treeNodeTemplate let-nodeWrapper="nodeWrapper">
   <div class="node-container">
