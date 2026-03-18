@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^21.2.0",
     "@angular/platform-browser-dynamic": "^21.2.0",
     "@cluetec/ngcx-tree": "^21.0.0",
-    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@fortawesome/fontawesome-free": "^7.2.0",
     "rxjs": "~7.8.2",
     "zone.js": "~0.16.1"
   },
