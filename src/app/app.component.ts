@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { NgcxTreeNode, NgcxTreeNodeWrapper } from '@cluetec/ngcx-tree';
 import { NgcxTreeSampleViewerComponent } from './ngcx-tree-sample-viewer/ngcx-tree-sample-viewer.component';
 import { NgcxTreeSampleData } from './samples/_model';
@@ -15,6 +15,7 @@ import { Versions } from './version';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgcxTreeSampleViewerComponent],
 })
 export class AppComponent implements OnInit {

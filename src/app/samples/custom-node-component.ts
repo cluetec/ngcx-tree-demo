@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { NgcxCustomComponent, NgcxTreeNodeWrapper } from '@cluetec/ngcx-tree';
 
 @Component({
   selector: 'app-custom-component',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `<strong>{{ nodeWrapper.data.title }}</strong>
     <i>(id:{{ nodeWrapper.id }}, next:{{ nodeWrapper.next?.id ?? 'none' }})</i>
     <button (click)="sampleClicked()">sample button</button> `,

@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import {
   NgcxTreeComponent,
   NgcxTreeNodeMovedEvent,
@@ -12,6 +12,7 @@ import { NgcxTreeSampleData } from '../samples/_model';
   selector: 'app-ngcx-tree-sample-viewer',
   templateUrl: './ngcx-tree-sample-viewer.component.html',
   styleUrls: ['./ngcx-tree-sample-viewer.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [NgcxTreeComponent, PrintMethodsPipe, JsonPipe],
 })
 export class NgcxTreeSampleViewerComponent implements OnInit {
